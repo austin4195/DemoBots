@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    Copyright (C) 2016 Apple Inc. All Rights Reserved.
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
@@ -237,7 +237,12 @@ struct GameplayConfiguration {
         /// The size of the timer node font as a proportion of the level scene's height.
         static let fontSize: CGFloat = 0.05
         
+        #if os(tvOS)
+        /// The size of padding between the top of the scene and the timer node.
+        static let paddingSize: CGFloat = 60.0
+        #else
         /// The size of padding between the top of the scene and the timer node as a proportion of the timer node's font size.
         static let paddingSize: CGFloat = 0.2
+        #endif
     }
 }

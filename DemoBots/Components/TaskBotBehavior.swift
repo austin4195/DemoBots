@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    Copyright (C) 2016 Apple Inc. All Rights Reserved.
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
@@ -106,7 +106,7 @@ class TaskBotBehavior: GKBehavior {
         */
         return scene.polygonObstacles.filter { obstacle in
             // Retrieve all vertices for the polygon obstacle.
-            let range = Range(start: 0, end: obstacle.vertexCount)
+            let range = 0..<obstacle.vertexCount
             
             let polygonVertices = range.map { obstacle.vertexAtIndex($0) }
             guard !polygonVertices.isEmpty else { return false }

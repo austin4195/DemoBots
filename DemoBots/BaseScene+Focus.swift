@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    Copyright (C) 2016 Apple Inc. All Rights Reserved.
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
@@ -66,7 +66,7 @@ extension BaseScene {
         sortedFocusableButtons.forEach { $0.focusableNeighbors.removeAll() }
         
         // Connect the adjacent button nodes.
-        for var i = 0; i < sortedFocusableButtons.count - 1; i++ {
+        for i in 0..<sortedFocusableButtons.count - 1 {
             let node = sortedFocusableButtons[i]
             let nextNode = sortedFocusableButtons[i + 1]
             

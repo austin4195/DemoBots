@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    Copyright (C) 2016 Apple Inc. All Rights Reserved.
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
@@ -162,6 +162,8 @@ class LevelScene: BaseScene, SKPhysicsContactDelegate {
         timerNode.zPosition = WorldLayer.AboveCharacters.rawValue
         timerNode.fontColor = SKColor.whiteColor()
         timerNode.fontName = GameplayConfiguration.Timer.fontName
+        timerNode.horizontalAlignmentMode = .Center
+        timerNode.verticalAlignmentMode = .Top
         scaleTimerNode()
         camera!.addChild(timerNode)
 
@@ -569,10 +571,14 @@ class LevelScene: BaseScene, SKPhysicsContactDelegate {
         timerNode.fontSize = size.height * GameplayConfiguration.Timer.fontSize
         
         // Make sure the timer node is positioned at the top of the scene.
-        timerNode.position.y = (size.height / 2.0) - timerNode.frame.size.height
+        timerNode.position.y = size.height / 2.0
         
         // Add padding between the top of scene and the top of the timer node.
-        timerNode.position.y -= timerNode.fontSize * GameplayConfiguration.Timer.paddingSize
+        #if os(tvOS)
+        timerNode.position.y -= GameplayConfiguration.Timer.paddingSize
+        #else
+        timerNode.position.y -= GameplayConfiguration.Timer.paddingSize * timerNode.fontSize
+        #endif
     }
     
     private func beamInPlayerBot() {

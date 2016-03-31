@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    Copyright (C) 2016 Apple Inc. All Rights Reserved.
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
@@ -136,10 +136,11 @@ class AnimationComponent: GKComponent {
             `animation` variable's `frameOffset` property can be modified later in this method
             if we choose to offset the animation's start point from zero.
         */
-        guard var animation = animations[animationState]?[compassDirection] else {
+        guard let unwrappedAnimation = animations[animationState]?[compassDirection] else {
             print("Unknown animation for state \(animationState.rawValue), compass direction \(compassDirection.rawValue).")
             return
         }
+        var animation = unwrappedAnimation
         
         // Check if the action for the body node has changed.
         if currentAnimation?.bodyActionName != animation.bodyActionName {

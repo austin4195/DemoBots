@@ -12,7 +12,7 @@ DemoBots takes advantage of the Xcode 7 scene and actions editor to create detai
 
 ### Build
 
-Xcode 7.1, OS X 10.11 SDK, iOS 9.0 SDK, tvOS 9.0 SDK
+Xcode 7.3, OS X 10.11 SDK, iOS 9.0 SDK, tvOS 9.0 SDK
 
 ### Runtime
 
@@ -114,4 +114,4 @@ DemoBots supports screen recording on iOS with ReplayKit to capture and share yo
 
 For more information about DemoBots, see WWDC 2015 session 609, "Deeper into GameplayKit with DemoBots", available from https://developer.apple.com/videos/wwdc/2015/ .
 
-Copyright (C) 2015 Apple Inc. All rights reserved.
+Copyright (C) 2016 Apple Inc. All rights reserved.

@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    Copyright (C) 2016 Apple Inc. All Rights Reserved.
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
@@ -41,7 +41,9 @@ final class GameInput {
 
     var controlInputSources: [ControlInputSourceType] {
         // Return a non-optional array of `ControlInputSourceType`s.
-        return [nativeControlInputSource, secondaryControlInputSource].flatMap { $0 as ControlInputSourceType? }
+        let sources: [ControlInputSourceType?] = [nativeControlInputSource, secondaryControlInputSource]
+        
+        return sources.flatMap { return $0 as ControlInputSourceType? }
     }
 
     weak var delegate: GameInputDelegate? {
@@ -75,8 +77,8 @@ final class GameInput {
 
     /// Register for `GCGameController` pairing notifications.
     func registerForGameControllerNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleControllerDidConnectNotification:", name: GCControllerDidConnectNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleControllerDidDisconnectNotification:", name: GCControllerDidDisconnectNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameInput.handleControllerDidConnectNotification(_:)), name: GCControllerDidConnectNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameInput.handleControllerDidDisconnectNotification(_:)), name: GCControllerDidDisconnectNotification, object: nil)
     }
     
     deinit {

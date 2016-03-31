@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
+    Copyright (C) 2016 Apple Inc. All Rights Reserved.
     See LICENSE.txt for this sample’s licensing information
     
     Abstract:
@@ -50,7 +50,7 @@ extension LevelScene {
     */
     func registerForPauseNotifications() {
         for notificationName in pauseNotificationNames {
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "pauseGame", name: notificationName, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LevelScene.pauseGame), name: notificationName, object: nil)
         }
     }
     
