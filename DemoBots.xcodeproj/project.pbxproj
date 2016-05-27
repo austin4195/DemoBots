@@ -334,6 +334,9 @@
 		B5D5FB631B1B7E3D007D0C86 /* ContactNotifiableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D5FB611B1B7E3D007D0C86 /* ContactNotifiableType.swift */; };
 		B5DC405C1AFCA80100FD3900 /* TaskBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DC405B1AFCA80100FD3900 /* TaskBot.swift */; };
 		B5DC405D1AFCA80B00FD3900 /* TaskBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DC405B1AFCA80100FD3900 /* TaskBot.swift */; };
+		DBC143F91CBAD3E9009DE9C4 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = DBC143F81CBAD3E9009DE9C4 /* Level4.sks */; };
+		DBC143FA1CBAD3E9009DE9C4 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = DBC143F81CBAD3E9009DE9C4 /* Level4.sks */; };
+		DBC143FB1CBAD3E9009DE9C4 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = DBC143F81CBAD3E9009DE9C4 /* Level4.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -466,6 +469,7 @@
 		B5D2B9271BE0E7D8005AF39E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5D5FB611B1B7E3D007D0C86 /* ContactNotifiableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactNotifiableType.swift; path = Protocols/ContactNotifiableType.swift; sourceTree = "<group>"; };
 		B5DC405B1AFCA80100FD3900 /* TaskBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskBot.swift; sourceTree = "<group>"; };
+		DBC143F81CBAD3E9009DE9C4 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -777,6 +781,8 @@
 				5537C2FD1B1FC8CD00C7CCE4 /* Level1 */,
 				55F9DAD91B1FF1CF002E7029 /* Level2 */,
 				5580442F1B203A2600470E29 /* Level3 */,
+				DBC143F71CBAD3BE009DE9C4 /* Level4 */,
+				DBC143F61CBAD36F009DE9C4 /* Level5 */,
 				55E352861AEC140B00985A5E /* LevelScene States */,
 			);
 			path = Scenes;
@@ -884,6 +890,22 @@
 			name = "IntelligenceComponent States (PlayerBot)";
 			sourceTree = "<group>";
 		};
+		DBC143F61CBAD36F009DE9C4 /* Level5 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Level5;
+			path = Levels/Level5;
+			sourceTree = "<group>";
+		};
+		DBC143F71CBAD3BE009DE9C4 /* Level4 */ = {
+			isa = PBXGroup;
+			children = (
+				DBC143F81CBAD3E9009DE9C4 /* Level4.sks */,
+			);
+			path = Level4;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -950,6 +972,7 @@
 					Level1,
 					Level2,
 					Level3,
+					Level4,
 				);
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
@@ -1012,6 +1035,7 @@
 				0A38AC331B73BE3C00AE9C43 /* SceneConfiguration.plist in Resources */,
 				0A38AC401B73BE4900AE9C43 /* Level3.xcassets in Resources */,
 				0A5ED64B1B73BE9100A36D86 /* GroundBot.xcassets in Resources */,
+				DBC143FB1CBAD3E9009DE9C4 /* Level4.sks in Resources */,
 				0A38AC3A1B73BE4100AE9C43 /* Level1.xcassets in Resources */,
 				0A38AC3B1B73BE4500AE9C43 /* Level2.plist in Resources */,
 				0A38AC3D1B73BE4500AE9C43 /* Level2.xcassets in Resources */,
@@ -1036,6 +1060,7 @@
 				55F9DADF1B1FF1CF002E7029 /* Level2.sks in Resources */,
 				55E3528C1AEC14E300985A5E /* FailScene.sks in Resources */,
 				B5B2DA711BE0DD7700DF201F /* HomeScene.sks in Resources */,
+				DBC143FA1CBAD3E9009DE9C4 /* Level4.sks in Resources */,
 				55E352891AEC145A00985A5E /* PauseScene.sks in Resources */,
 				5580442E1B2039B700470E29 /* Level2.xcassets in Resources */,
 				558044381B203A2600470E29 /* Level3.xcassets in Resources */,
@@ -1087,6 +1112,7 @@
 				55E352881AEC145A00985A5E /* PauseScene.sks in Resources */,
 				55F9DADE1B1FF1CF002E7029 /* Level2.sks in Resources */,
 				3ECAD5561AD630D5001D2E8E /* EndScene.sks in Resources */,
+				DBC143F91CBAD3E9009DE9C4 /* Level4.sks in Resources */,
 				55E3528B1AEC14E300985A5E /* FailScene.sks in Resources */,
 				3EDA0CDF1A89744100506454 /* Main.storyboard in Resources */,
 				558044351B203A2600470E29 /* Level3.sks in Resources */,
